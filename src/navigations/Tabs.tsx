@@ -3,8 +3,9 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import UserAccountScreen from '../screens/UserAccountScreen';
-import {COLORS, FONTS, SIZES, assets} from '../constants';
+import {COLORS, FONTS, SIZES, assets,SHADOWS} from '../constants';
 import {Image} from 'react-native';
+import SupportScreen from '../screens/SupportScreen';
 
 // Tab stack
 const Tab = createBottomTabNavigator();
@@ -22,8 +23,8 @@ const TabGroup = (props: Props) => {
             iconName = focused ? assets.heart : assets.badge;
           } else if (route.name === 'Account') {
             iconName = focused ? assets.person03 : assets.person02;
-          } else if (route.name === 'Accounta') {
-            iconName = focused ? assets.person03 : assets.person02;
+          } else if (route.name === 'Support') {
+            iconName = focused ? assets.person03 : assets.search;
           }
 
           return (
@@ -51,7 +52,23 @@ const TabGroup = (props: Props) => {
       })}>
       <Tab.Screen name="Main" component={HomeScreen} />
       <Tab.Screen name="Account" component={UserAccountScreen} />
-      <Tab.Screen name="Accounta" component={UserAccountScreen} />
+      <Tab.Screen
+        name="Support"
+        component={SupportScreen}
+        options={{
+          headerTitle: 'Help & Support',
+          headerShown: true,
+          headerTintColor: COLORS.primary,
+          headerTitleStyle: {
+            fontFamily: FONTS.regular,
+            fontSize: SIZES.large,
+            ...SHADOWS.dark,
+          },
+          headerStyle: {
+            backgroundColor: COLORS.white,
+          },
+        }}
+      />
     </Tab.Navigator>
   );
 };
