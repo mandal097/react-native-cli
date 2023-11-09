@@ -1,0 +1,73 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Inter-Bold.ttf",
+      "sha1": "114827cbea95681eee9d877b0b1ab0515d5f3b69"
+    },
+    {
+      "path": "src/assets/fonts/Inter-Light.ttf",
+      "sha1": "791a657bf537ff4272bae72f43c1c9981ab4d623"
+    },
+    {
+      "path": "src/assets/fonts/Inter-Medium.ttf",
+      "sha1": "17ec5016a5f2b2ea4f27f7bce1df4192d3590161"
+    },
+    {
+      "path": "src/assets/fonts/Inter-Regular.ttf",
+      "sha1": "077f819e60120b1ded3d5c5d8a23b8b53e12ec17"
+    },
+    {
+      "path": "src/assets/fonts/Inter-SemiBold.ttf",
+      "sha1": "29d9db84af04e729a01e0bb076c0afdf723e8bc5"
+    },
+    {
+      "path": "src/assets/icons/badge.png",
+      "sha1": "54889f034557e068fda31cd77a1a4884c88e606d"
+    },
+    {
+      "path": "src/assets/icons/chat.jpg",
+      "sha1": "031e67edf7a7278e72171833e4e854c99967c952"
+    },
+    {
+      "path": "src/assets/icons/heart.png",
+      "sha1": "58364ed69d20b3f4a21d15ae3ff5dad5b2b51549"
+    },
+    {
+      "path": "src/assets/icons/heart_hollow.png",
+      "sha1": "09819d48a651c61385c7dfa64c4290b6f7c9a550"
+    },
+    {
+      "path": "src/assets/icons/left.png",
+      "sha1": "9ff423ec7444925b215ee03200b16b39e566c174"
+    },
+    {
+      "path": "src/assets/icons/search.png",
+      "sha1": "4227c38d82793d36acd2f82d7d950ebc6f40277a"
+    },
+    {
+      "path": "src/assets/icons/telephone.jpg",
+      "sha1": "89ed8d74b26005d051010c6c37f3d8769972d444"
+    },
+    {
+      "path": "src/assets/images/green_gradient.jpg",
+      "sha1": "0661440fb09f1433afc0b3fe2de1323435139844"
+    },
+    {
+      "path": "src/assets/images/person01.png",
+      "sha1": "e6f51c4228b1fef43609d866b65f5fad6fcaf00f"
+    },
+    {
+      "path": "src/assets/images/person02.png",
+      "sha1": "e76d058fdaaf5a10eb128cef38d878f507b68505"
+    },
+    {
+      "path": "src/assets/images/person03.png",
+      "sha1": "40e53c6a2521e2d57d8d84695d6674db7169b485"
+    },
+    {
+      "path": "src/assets/images/person04.png",
+      "sha1": "90fedfac058dd7cff8b6a748d11264211a2454b1"
+    }
+  ]
+}
