@@ -62,7 +62,6 @@ const TabGroup = (props: Props) => {
           headerTitleStyle: {
             fontFamily: FONTS.regular,
             fontSize: SIZES.large,
-            ...SHADOWS.dark,
           },
           headerStyle: {
             backgroundColor: COLORS.white,

@@ -7,8 +7,7 @@ import {
   Text,
 } from 'react-native';
 import React from 'react';
-import {COLORS, SIZES, assets} from '../constants';
-import {useNavigation} from '@react-navigation/native';
+import {COLORS, FONTS, SIZES, assets} from '../constants';
 
 type Props = {
   imgSrc: ImageSourcePropType;
@@ -29,8 +28,9 @@ const Card = ({imgSrc, title, onpress}: Props) => {
       />
       <Text
         style={{
-          fontSize: SIZES.medium,
+          fontSize: SIZES.large,
           color: COLORS.primary,
+          fontFamily:FONTS.regular,
         }}>
         {title}
       </Text>
@@ -40,8 +40,7 @@ const Card = ({imgSrc, title, onpress}: Props) => {
 
 const SupportScreen = ({navigation}: any) => {
   const handleNavigate = (route: string) => {
-    console.log(route);
-    navigation.navigate('Login');
+    navigation.navigate(route);
   };
   return (
     <SafeAreaView style={styles.container}>
@@ -51,14 +50,9 @@ const SupportScreen = ({navigation}: any) => {
         onpress={() => handleNavigate('Contact')}
       />
       <Card
-        imgSrc={assets.badge}
-        title="FAQs"
-        onpress={() => handleNavigate('FAQs')}
-      />
-      <Card
         imgSrc={assets.person01}
         title="Privacy Policy"
-        onpress={() => handleNavigate('PrivacyPolicy')}
+        onpress={() => handleNavigate('Privacypolicy')}
       />
       <Card
         imgSrc={assets.person04}
