@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unstable-nested-components */
 import {StyleSheet, Image, Pressable} from 'react-native';
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -29,19 +28,19 @@ const Main = (props: Props) => {
         headerStyle: {
           backgroundColor: COLORS.white,
         },
-        headerLeft: () => (
-          <Pressable onPress={() => props.navigation.navigate('Support')}>
-            <Image
-              source={assets.left}
-              style={{
-                width: 20,
-                height: 20,
-                resizeMode: 'contain',
-                marginRight: 10,
-              }}
-            />
-          </Pressable>
-        ),
+        // headerLeft: () => (
+        //   <Pressable onPress={() => props.navigation.navigate('Support')}>
+        //     <Image
+        //       source={assets.left}
+        //       style={{
+        //         width: 20,
+        //         height: 20,
+        //         resizeMode: 'contain',
+        //         marginRight: 10,
+        //       }}
+        //     />
+        //   </Pressable>
+        // ),
       }}>
       <Stack.Screen name="Home" component={TabGroup} />
       <Stack.Screen
@@ -58,7 +57,10 @@ const Main = (props: Props) => {
       <Stack.Screen
         name="Privacypolicy"
         component={PrivacyPolicyScreen}
-        options={{headerShown: true, headerTitle: 'Privacy Policy'}}
+        options={{
+          headerShown: true,
+          headerTitle: 'Privacy Policy',
+        }}
       />
       <Stack.Screen
         name="Help"

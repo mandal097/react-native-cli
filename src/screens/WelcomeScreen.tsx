@@ -16,7 +16,7 @@ const WelcomeScreen = ({navigation}: any) => {
       source={assets.greenGradientBackground}
       style={styles.backgroundImage}>
       <View style={styles.container}>
-        <FocusedStatusBar backgroundcolor={COLORS.greenShade}/>
+        <FocusedStatusBar backgroundcolor={COLORS.greenShade} />
         {/* first image */}
         <View
           style={{
@@ -111,7 +111,7 @@ const WelcomeScreen = ({navigation}: any) => {
             ],
           }}>
           <Image
-            source={assets.telephone}
+            source={assets.textFieldPhoneIcon}
             style={{
               width: '100%',
               height: '100%',
@@ -119,7 +119,7 @@ const WelcomeScreen = ({navigation}: any) => {
               borderTopRightRadius: 50,
               borderBottomLeftRadius: 50,
             }}
-            resizeMode="cover"
+            resizeMode="contain"
           />
         </View>
 
@@ -144,7 +144,9 @@ const WelcomeScreen = ({navigation}: any) => {
               fontSize: SIZES.large,
               color: COLORS.white,
             }}>
-            Connect with our buddies to release your stress!!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex autem
+            totam laboriosam, facere cupiditate laborum ullam alias veniam
+            debitis consequuntur!
           </Text>
           <TouchableOpacity
             onPress={() => navigation.navigate('Signup')}
@@ -163,7 +165,7 @@ const WelcomeScreen = ({navigation}: any) => {
               flexDirection: 'row',
               gap: 5,
               alignItems: 'center',
-              marginTop:10,
+              marginTop: 10,
             }}>
             <Text style={styles.bottomTxt}>Already have an account?</Text>
             <Text

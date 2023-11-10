@@ -5,6 +5,8 @@ import {
   SafeAreaView,
   StyleSheet,
   Text,
+  Linking,
+  Alert,
 } from 'react-native';
 import React from 'react';
 import {COLORS, FONTS, SIZES, assets} from '../constants';
@@ -30,7 +32,7 @@ const Card = ({imgSrc, title, onpress}: Props) => {
         style={{
           fontSize: SIZES.large,
           color: COLORS.primary,
-          fontFamily:FONTS.regular,
+          fontFamily: FONTS.regular,
         }}>
         {title}
       </Text>
@@ -39,15 +41,28 @@ const Card = ({imgSrc, title, onpress}: Props) => {
 };
 
 const SupportScreen = ({navigation}: any) => {
+
+  //
   const handleNavigate = (route: string) => {
     navigation.navigate(route);
   };
+
+  // opening whatsapp
+  const phoneNumber = '7838438857';
+  const openWhatsApp = () => {
+    const whatsappURL = `whatsapp://send?phone=${phoneNumber}&text=Hello`;
+
+    Linking.openURL(whatsappURL).catch(error =>
+      console.error('An error occurred', error),
+    );
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <Card
         imgSrc={assets.whatsAppIcon}
         title="Contact Us"
-        onpress={() => handleNavigate('Contact')}
+        onpress={openWhatsApp}
       />
       <Card
         imgSrc={assets.passwordIcon}
