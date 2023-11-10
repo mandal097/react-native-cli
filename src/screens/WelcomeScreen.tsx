@@ -7,14 +7,16 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import {COLORS, FONTS, SIZES} from '../constants';
+import {COLORS, FONTS, SIZES, assets} from '../constants';
+import FocusedStatusBar from '../components/FocusedStatusBar';
 
 const WelcomeScreen = ({navigation}: any) => {
   return (
     <ImageBackground
-      source={require('../assets/images/green_gradient.jpg')}
+      source={assets.greenGradientBackground}
       style={styles.backgroundImage}>
       <View style={styles.container}>
+        <FocusedStatusBar backgroundcolor={COLORS.greenShade}/>
         {/* first image */}
         <View
           style={{
@@ -30,7 +32,7 @@ const WelcomeScreen = ({navigation}: any) => {
             ],
           }}>
           <Image
-            source={require('../assets/icons/chat.jpg')}
+            source={assets.chatIcon}
             style={{
               width: '100%',
               height: '100%',
@@ -57,7 +59,7 @@ const WelcomeScreen = ({navigation}: any) => {
             ],
           }}>
           <Image
-            source={require('../assets/icons/telephone.jpg')}
+            source={assets.telephone}
             style={{
               width: '100%',
               height: '100%',
@@ -83,7 +85,7 @@ const WelcomeScreen = ({navigation}: any) => {
             ],
           }}>
           <Image
-            source={require('../assets/icons/chat.jpg')}
+            source={assets.chatIcon}
             style={{
               width: '100%',
               height: '100%',
@@ -109,7 +111,7 @@ const WelcomeScreen = ({navigation}: any) => {
             ],
           }}>
           <Image
-            source={require('../assets/icons/telephone.jpg')}
+            source={assets.telephone}
             style={{
               width: '100%',
               height: '100%',

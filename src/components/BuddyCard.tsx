@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import {COLORS, FONTS, SIZES, SHADOWS} from '../constants';
+import {COLORS, FONTS, SIZES, SHADOWS, assets} from '../constants';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {BuddyCardProps} from '../types';
@@ -21,7 +21,7 @@ const BuddyCard = ({item, navigation}: Props) => {
   const [favs, setFavs] = React.useState(false);
 
   const navigateToDetails = () => {
-    navigation.navigate('Buddydetail');
+    navigation.navigate('Buddyprofile');
   };
 
   const handleFavHeart = () => {
@@ -32,11 +32,11 @@ const BuddyCard = ({item, navigation}: Props) => {
     <View style={styles.container}>
       <View style={styles.cornerDecoration}>
         <Image
-          source={require('../assets/icons/badge.png')}
+          source={assets.coin}
           resizeMode="contain"
           style={{
-            width: 15,
-            height: 15,
+            width: 10,
+            height: 10,
           }}
         />
         <Text
@@ -64,7 +64,7 @@ const BuddyCard = ({item, navigation}: Props) => {
           }}>
           {!favs ? (
             <Image
-              source={require('../assets/icons/heart_hollow.png')}
+              source={assets.heartFade}
               resizeMode="contain"
               style={{
                 width: '70%',
@@ -108,7 +108,7 @@ const BuddyCard = ({item, navigation}: Props) => {
               marginTop: 3,
             }}>
             <Image
-              source={require('../assets/icons/badge.png')}
+              source={assets.starFull}
               resizeMode="contain"
               style={{
                 width: 15,
@@ -116,7 +116,7 @@ const BuddyCard = ({item, navigation}: Props) => {
               }}
             />
             <Image
-              source={require('../assets/icons/badge.png')}
+              source={assets.starFull}
               resizeMode="contain"
               style={{
                 width: 15,
@@ -124,7 +124,7 @@ const BuddyCard = ({item, navigation}: Props) => {
               }}
             />
             <Image
-              source={require('../assets/icons/badge.png')}
+              source={assets.starFull}
               resizeMode="contain"
               style={{
                 width: 15,
@@ -132,7 +132,7 @@ const BuddyCard = ({item, navigation}: Props) => {
               }}
             />
             <Image
-              source={require('../assets/icons/badge.png')}
+              source={assets.starFull}
               resizeMode="contain"
               style={{
                 width: 15,

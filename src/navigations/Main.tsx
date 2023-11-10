@@ -3,7 +3,7 @@ import {StyleSheet, Image, Pressable} from 'react-native';
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TabGroup from './Tabs';
-import BuddyDetailScreen from '../screens/BuddyDetailScreen';
+import BuddyProfileScreen from '../screens/BuddyProfileScreen';
 import ContactScreen from '../screens/ContactScreen';
 import PrivacyPolicyScreen from '../screens/PrivacyPolicyScreen';
 import HelpScreen from '../screens/HelpScreen';
@@ -44,7 +44,11 @@ const Main = (props: Props) => {
         ),
       }}>
       <Stack.Screen name="Home" component={TabGroup} />
-      <Stack.Screen name="Buddydetail" component={BuddyDetailScreen} />
+      <Stack.Screen
+        name="Buddyprofile"
+        component={BuddyProfileScreen}
+        options={{headerShown: true, headerTitle: 'Profile'}}
+      />
 
       <Stack.Screen
         name="Contact"

@@ -21,8 +21,8 @@ const Card = ({imgSrc, title, onpress}: Props) => {
       <Image
         source={imgSrc}
         style={{
-          width: 20,
-          height: 20,
+          width: 25,
+          height: 25,
           resizeMode: 'contain',
         }}
       />
@@ -45,17 +45,17 @@ const SupportScreen = ({navigation}: any) => {
   return (
     <SafeAreaView style={styles.container}>
       <Card
-        imgSrc={assets.heart}
+        imgSrc={assets.whatsAppIcon}
         title="Contact Us"
         onpress={() => handleNavigate('Contact')}
       />
       <Card
-        imgSrc={assets.person01}
+        imgSrc={assets.passwordIcon}
         title="Privacy Policy"
         onpress={() => handleNavigate('Privacypolicy')}
       />
       <Card
-        imgSrc={assets.person04}
+        imgSrc={assets.helpIcon}
         title="Help Center"
         onpress={() => handleNavigate('Help')}
       />

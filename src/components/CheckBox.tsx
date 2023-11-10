@@ -9,19 +9,24 @@ type Props = {
 };
 
 const CheckBox = ({isChecked, onPress, title}: Props) => {
-  const iconImg = isChecked ? assets.heart : assets.badge;
+  // const iconImg = isChecked ? assets.heart : assets.badge;
 
   return (
     <View style={styles.container}>
       <Pressable onPress={onPress} style={styles.pressable}>
-        <Image
-          style={{width: 15, height: 15}}
-          resizeMode="contain"
-          source={iconImg}
-        />
+        {isChecked && (
+          <Image
+            style={{width: 15, height: 15}}
+            resizeMode="contain"
+            source={assets.checked}
+          />
+        )}
       </Pressable>
       <Text style={styles.title}>I agree with</Text>
-      <Text style={[styles.title, {color: COLORS.greenShade}]}>{title}{'.'}</Text>
+      <Text style={[styles.title, {color: COLORS.greenShade}]}>
+        {title}
+        {'.'}
+      </Text>
     </View>
   );
 };

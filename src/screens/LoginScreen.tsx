@@ -58,9 +58,9 @@ const LoginScreen = ({navigation}: any) => {
               />
             </TouchableOpacity>
             <Image
-              style={{width: 100, height: 100}}
+              style={{width: 200, height: 200}}
               resizeMode="contain"
-              source={assets.person04}
+              source={assets.AppLogo}
             />
           </View>
           {/* // content */}
@@ -97,7 +97,7 @@ const LoginScreen = ({navigation}: any) => {
               <View style={styles.inputContainer}>
                 <Image
                   style={styles.inputImg}
-                  source={assets.person03}
+                  source={assets.textFieldPhoneIcon}
                   resizeMode="contain"
                 />
                 <TextInput
@@ -114,7 +114,7 @@ const LoginScreen = ({navigation}: any) => {
               <View style={styles.inputContainer}>
                 <Image
                   style={styles.inputImg}
-                  source={assets.person03}
+                  source={assets.passwordIcon}
                   resizeMode="contain"
                 />
                 <TextInput

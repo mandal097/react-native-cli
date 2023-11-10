@@ -3,7 +3,7 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import UserAccountScreen from '../screens/UserAccountScreen';
-import {COLORS, FONTS, SIZES, assets,SHADOWS} from '../constants';
+import {COLORS, FONTS, SIZES, assets, SHADOWS} from '../constants';
 import {Image} from 'react-native';
 import SupportScreen from '../screens/SupportScreen';
 
@@ -20,11 +20,15 @@ const TabGroup = (props: Props) => {
         tabBarIcon: ({focused}) => {
           let iconName;
           if (route.name === 'Main') {
-            iconName = focused ? assets.heart : assets.badge;
+            iconName = focused
+              ? assets.homeTabIcon
+              : assets.homeTabIconInactive;
           } else if (route.name === 'Account') {
-            iconName = focused ? assets.person03 : assets.person02;
+            iconName = focused
+              ? assets.userTabIcon
+              : assets.userTabIconInactive;
           } else if (route.name === 'Support') {
-            iconName = focused ? assets.person03 : assets.search;
+            iconName = focused ? assets.supportTabIcon : assets.helpIcon;
           }
 
           return (
@@ -38,11 +42,11 @@ const TabGroup = (props: Props) => {
           );
           // return <Icon name="home" size={22} color={color} />;
         },
-        tabBarActiveTintColor: 'red',
-        tabBarInactiveTintColor: COLORS.gray,
+        tabBarActiveTintColor:COLORS.greenShade,
+        tabBarInactiveTintColor: COLORS.secondary,
         tabBarStyle: {
           alignItems: 'center',
-          backgroundColor: COLORS.primary,
+          backgroundColor: COLORS.white,
           padding: 10,
         },
         tabBarLabelStyle: {
