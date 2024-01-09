@@ -75,7 +75,7 @@ const BuddyProfileScreen = () => {
                 resizeMode: 'contain',
               }}
             />
-            <Text style={{fontFamily: FONTS.medium, fontSize: SIZES.small}}>
+            <Text style={{fontFamily: FONTS.medium, fontSize: SIZES.small,color:COLORS.primary}}>
               Attends 188 calls
             </Text>
           </View>
@@ -89,7 +89,7 @@ const BuddyProfileScreen = () => {
                 resizeMode: 'contain',
               }}
             />
-            <Text style={{fontFamily: FONTS.medium, fontSize: SIZES.small}}>
+            <Text style={{fontFamily: FONTS.medium, fontSize: SIZES.small,color:COLORS.primary}}>
               Joined 2 yrs back
             </Text>
           </View>
@@ -102,7 +102,7 @@ const BuddyProfileScreen = () => {
               alignItems: 'center',
               justifyContent: 'space-between',
             }}>
-            <Text style={{fontSize: SIZES.font, fontFamily: FONTS.semiBold}}>
+            <Text style={{fontSize: SIZES.font, fontFamily: FONTS.semiBold,color:COLORS.primary}}>
               Ratings & Reviews
             </Text>
             <Text
@@ -142,7 +142,7 @@ const BuddyProfileScreen = () => {
               alignItems: 'center',
               justifyContent: 'center',
             }}>
-            <Text>2-3 high rated Reviews here</Text>
+            <Text style={{color:COLORS.primary}}>2-3 high rated Reviews here</Text>
           </View>
 
           <View
@@ -156,7 +156,7 @@ const BuddyProfileScreen = () => {
               alignItems: 'center',
               justifyContent: 'center',
             }}>
-            <Text>2-3 high rated Reviews here</Text>
+            <Text style={{color:COLORS.primary}}>2-3 high rated Reviews here</Text>
           </View>
           <View
             style={{
@@ -189,15 +189,15 @@ const BuddyProfileScreen = () => {
           }}>
           <Text
             style={{
-              fontSize: SIZES.medium,
-              fontFamily: FONTS.semiBold,
+              fontSize: SIZES.small,
+              fontFamily: FONTS.medium,
               color: COLORS.primary,
             }}>
            Take an instant session
           </Text>
           <Text
             style={{
-              fontSize: SIZES.medium,
+              fontSize: SIZES.small,
               fontFamily: FONTS.semiBold,
               color: COLORS.primary,
             }}>

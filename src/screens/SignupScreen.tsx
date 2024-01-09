@@ -21,7 +21,7 @@ const SignupScreen = ({navigation}: any) => {
   const [isChecked, setIsChecked] = React.useState(false);
 
   const handleSignup = () => {
-  navigation.navigate('Tour')
+  navigation.navigate('Main')
   };
 
   const handleCheckBox = () => {
@@ -37,7 +37,7 @@ const SignupScreen = ({navigation}: any) => {
           {/* top content */}
           <View
             style={{
-              height: 200,
+              height: 180,
               backgroundColor: 'transparent',
               alignItems: 'center',
               justifyContent: 'center',
@@ -73,9 +73,9 @@ const SignupScreen = ({navigation}: any) => {
           {/* // content */}
           <ScrollView
             style={{
-              // flex: 1,
+              flex: 1,
               padding: 20,
-              paddingBottom: 40,
+              // paddingBottom: 40,
               flexDirection: 'column',
               backgroundColor: COLORS.white,
               borderTopLeftRadius: 30,
@@ -91,12 +91,12 @@ const SignupScreen = ({navigation}: any) => {
                 fontFamily: FONTS.semiBold,
                 fontSize: SIZES.medium,
                 color: COLORS.primary,
-                marginBottom: 30,
+                marginBottom: 20,
               }}>
               Create your Account
             </Text>
             <KeyboardAvoidingView
-              style={{marginBottom: 10}}
+              style={{marginBottom: 0}}
               enabled
               behavior="padding">
               <Text style={styles.label}>Name :</Text>
@@ -109,9 +109,9 @@ const SignupScreen = ({navigation}: any) => {
                 <TextInput
                   placeholder="Enter your name"
                   value={name}
-                  placeholderTextColor={COLORS.secondary}
                   onChangeText={text => setName(text)}
-                  style={{flex: 1}}
+                  placeholderTextColor={COLORS.secondary}
+                   style={{flex: 1,color:COLORS.primary}}
                 />
               </View>
 
@@ -129,7 +129,7 @@ const SignupScreen = ({navigation}: any) => {
                   onChangeText={text => setPhone(text)}
                   keyboardType="phone-pad"
                   placeholderTextColor={COLORS.secondary}
-                  style={{flex: 1}}
+                   style={{flex: 1,color:COLORS.primary}}
                 />
               </View>
               {/*  */}
@@ -145,9 +145,11 @@ const SignupScreen = ({navigation}: any) => {
                   value={password}
                   onChangeText={text => setPassword(text)}
                   placeholderTextColor={COLORS.secondary}
-                  style={{flex: 1}}
+                   style={{flex: 1,color:COLORS.primary}}
                 />
               </View>
+              
+            </KeyboardAvoidingView>
 
               {/*  */}
               <CheckBox
@@ -161,7 +163,7 @@ const SignupScreen = ({navigation}: any) => {
                   Sigup
                 </Text>
               </TouchableOpacity>
-            </KeyboardAvoidingView>
+            
 
             {/*  */}
             <View
@@ -170,7 +172,8 @@ const SignupScreen = ({navigation}: any) => {
                 alignItems: 'center',
                 gap: 5,
                 alignSelf: 'center',
-                marginTop: 30,
+                marginBottom: 60,
+                marginTop: 20,
               }}>
               <Text style={styles.bottomTxt}>Already have an account?</Text>
               <Text
@@ -186,6 +189,7 @@ const SignupScreen = ({navigation}: any) => {
                 Login
               </Text>
             </View>
+            
           </ScrollView>
         </View>
       </ImageBackground>

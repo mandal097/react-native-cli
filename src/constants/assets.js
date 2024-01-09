@@ -22,6 +22,8 @@ import userTabIcon from '../assets/icons/user_tab_icon.png';
 import userTabIconInactive from '../assets/icons/user_tab_icon_inactive.png';
 import whatsAppIcon from '../assets/icons/whatsapp.png';
 import joined from '../assets/icons/joined.png';
+import dob from '../assets/icons/dob.png';
+import address from '../assets/icons/address.png';
 
 
 
@@ -58,6 +60,8 @@ export default {
   userTabIconInactive,
   whatsAppIcon,
   joined,
+  address,
+  dob,
 
   person01,
   person02,

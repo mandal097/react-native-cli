@@ -5,7 +5,9 @@ import {
   ImageBackground,
   StyleSheet,
   Image,
+  ScrollView,
   TouchableOpacity,
+  Dimensions,
 } from 'react-native';
 import {COLORS, FONTS, SIZES, assets} from '../constants';
 import FocusedStatusBar from '../components/FocusedStatusBar';
@@ -15,174 +17,88 @@ const WelcomeScreen = ({navigation}: any) => {
     <ImageBackground
       source={assets.greenGradientBackground}
       style={styles.backgroundImage}>
-      <View style={styles.container}>
-        <FocusedStatusBar backgroundcolor={COLORS.greenShade} />
-        {/* first image */}
-        <View
-          style={{
-            width: 90,
-            height: 90,
-            position: 'absolute',
-            top: 300,
-            left: 15,
-            transform: [
-              {
-                rotate: '-20deg',
-              },
-            ],
-          }}>
-          <Image
-            source={assets.chatIcon}
-            style={{
-              width: '100%',
-              height: '100%',
-              borderRadius: 2,
-              borderTopRightRadius: 5,
-              borderBottomLeftRadius: 5,
-            }}
-            resizeMode="cover"
-          />
-        </View>
-
-        {/* second image */}
-        <View
-          style={{
-            width: 120,
-            height: 120,
-            position: 'absolute',
-            top: 90,
-            left: 50,
-            transform: [
-              {
-                rotate: '-10deg',
-              },
-            ],
-          }}>
-          <Image
-            source={assets.telephone}
-            style={{
-              width: '100%',
-              height: '100%',
-              borderRadius: 2,
-              borderTopLeftRadius: 20,
-              borderBottomRightRadius: 20,
-            }}
-            resizeMode="cover"
-          />
-        </View>
-        {/* third image */}
-        <View
-          style={{
-            width: 120,
-            height: 120,
-            position: 'absolute',
-            top: 30,
-            right: 30,
-            transform: [
-              {
-                rotate: '-10deg',
-              },
-            ],
-          }}>
-          <Image
-            source={assets.chatIcon}
-            style={{
-              width: '100%',
-              height: '100%',
-              borderRadius: 2,
-              borderTopRightRadius: 10,
-              borderBottomLeftRadius: 10,
-            }}
-            resizeMode="cover"
-          />
-        </View>
-        {/* fouth image */}
-        <View
-          style={{
-            width: 180,
-            height: 180,
-            position: 'absolute',
-            top: 220,
-            right: 20,
-            transform: [
-              {
-                rotate: '-10deg',
-              },
-            ],
-          }}>
-          <Image
-            source={assets.textFieldPhoneIcon}
-            style={{
-              width: '100%',
-              height: '100%',
-              borderRadius: 2,
-              borderTopRightRadius: 50,
-              borderBottomLeftRadius: 50,
-            }}
-            resizeMode="contain"
-          />
-        </View>
-
-        <View
-          style={{
-            height: 'auto',
-            padding: 10,
-            paddingBottom: 20,
-            flexDirection: 'column',
-            gap: 15,
-          }}>
-          <Text
-            style={{
-              fontSize: 50,
-              color: COLORS.white,
-              fontFamily: FONTS.medium,
-            }}>
-            Let's Get Started 🤞
-          </Text>
-          <Text
-            style={{
-              fontSize: SIZES.large,
-              color: COLORS.white,
-            }}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex autem
-            totam laboriosam, facere cupiditate laborum ullam alias veniam
-            debitis consequuntur!
-          </Text>
-          <TouchableOpacity
-            onPress={() => navigation.navigate('Signup')}
-            style={{
-              backgroundColor: COLORS.white,
-              padding: 10,
-              borderRadius: 6,
-              alignItems: 'center',
-              justifyContent: 'center',
-              marginTop: 40,
-            }}>
-            <Text>Join Now</Text>
-          </TouchableOpacity>
+      <ScrollView>
+      <FocusedStatusBar backgroundcolor={COLORS.greenShade} />
+        <View style={styles.container}>
           <View
             style={{
-              flexDirection: 'row',
-              gap: 5,
+              height: 'auto',
+              backgroundColor: 'transparent',
               alignItems: 'center',
-              marginTop: 10,
+              justifyContent: 'center',
+              position: 'relative',
             }}>
-            <Text style={styles.bottomTxt}>Already have an account?</Text>
+            <Image
+              style={{
+                width: Dimensions.get('screen').height * 0.36,
+                height: Dimensions.get('screen').height * 0.36,
+              }}
+              resizeMode="contain"
+              source={assets.AppLogo}
+            />
+          </View>
+
+          <View
+            style={{
+              height:'auto',
+              padding: 10,
+              paddingBottom: 20,
+              flexDirection: 'column',
+              gap: 15,
+            }}>
             <Text
-              onPress={() => navigation.navigate('Login')}
-              style={[
-                styles.bottomTxt,
-                {
-                  color: COLORS.primary,
-                  fontFamily: FONTS.semiBold,
-                  fontSize: SIZES.font,
-                },
-              ]}>
-              Login
+              style={{
+                fontSize: 40,
+                color: COLORS.white,
+                fontFamily: FONTS.medium,
+              }}>
+              Let's Get Started 🤞
             </Text>
+            <Text
+              style={{
+                fontSize: SIZES.medium,
+                color: COLORS.white,
+              }}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex autem
+              totam laboriosam, facere cupiditate laborum ullam alias veniam
+              debitis consequuntur!
+            </Text>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('Signup')}
+              style={{
+                backgroundColor: COLORS.white,
+                padding: 10,
+                borderRadius: 6,
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginTop: 20,
+              }}>
+              <Text style={{color: COLORS.primary}}>Join Now</Text>
+            </TouchableOpacity>
+            <View
+              style={{
+                flexDirection: 'row',
+                gap: 5,
+                alignItems: 'center',
+                marginTop: 10,
+              }}>
+              <Text style={styles.bottomTxt}>Already have an account?</Text>
+              <Text
+                onPress={() => navigation.navigate('Login')}
+                style={[
+                  styles.bottomTxt,
+                  {
+                    color: COLORS.primary,
+                    fontFamily: FONTS.semiBold,
+                    fontSize: SIZES.small,
+                  },
+                ]}>
+                Login
+              </Text>
+            </View>
           </View>
         </View>
-      </View>
+      </ScrollView>
     </ImageBackground>
   );
 };
@@ -195,10 +111,10 @@ const styles = StyleSheet.create({
     resizeMode: 'cover', // You can adjust this to 'contain' or other values
   },
   container: {
-    flex: 1,
-    position: 'relative',
+    // flex: 1,
     padding: 10,
-    justifyContent: 'flex-end',
+    position: 'relative',
+    justifyContent: 'center',
   },
   text: {
     fontSize: 20,

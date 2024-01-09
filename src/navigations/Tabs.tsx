@@ -2,7 +2,7 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
-import UserAccountScreen from '../screens/UserAccountScreen';
+import UserProfileScreen from '../screens/UserProfileScreen';
 import {COLORS, FONTS, SIZES, assets, SHADOWS} from '../constants';
 import {Image} from 'react-native';
 import SupportScreen from '../screens/SupportScreen';
@@ -17,6 +17,14 @@ const TabGroup = (props: Props) => {
     <Tab.Navigator
       screenOptions={({route}) => ({
         headerShown: false,
+        headerTintColor: COLORS.primary,
+        headerTitleStyle: {
+          fontFamily: FONTS.regular,
+          fontSize: SIZES.large,
+        },
+        headerStyle: {
+          backgroundColor: COLORS.white,
+        },
         tabBarIcon: ({focused}) => {
           let iconName;
           if (route.name === 'Main') {
@@ -40,9 +48,8 @@ const TabGroup = (props: Props) => {
               />
             </>
           );
-          // return <Icon name="home" size={22} color={color} />;
         },
-        tabBarActiveTintColor:COLORS.greenShade,
+        tabBarActiveTintColor: COLORS.greenShade,
         tabBarInactiveTintColor: COLORS.secondary,
         tabBarStyle: {
           alignItems: 'center',
@@ -55,21 +62,20 @@ const TabGroup = (props: Props) => {
         },
       })}>
       <Tab.Screen name="Main" component={HomeScreen} />
-      <Tab.Screen name="Account" component={UserAccountScreen} />
+      <Tab.Screen
+        name="Account"
+        component={UserProfileScreen}
+        options={{
+          headerTitle: 'My Profile',
+          headerShown: true,
+        }}
+      />
       <Tab.Screen
         name="Support"
         component={SupportScreen}
         options={{
           headerTitle: 'Help & Support',
           headerShown: true,
-          headerTintColor: COLORS.primary,
-          headerTitleStyle: {
-            fontFamily: FONTS.regular,
-            fontSize: SIZES.large,
-          },
-          headerStyle: {
-            backgroundColor: COLORS.white,
-          },
         }}
       />
     </Tab.Navigator>

@@ -162,7 +162,7 @@ const BuddyCard = ({item, navigation}: Props) => {
           <View style={{flexDirection: 'row', gap: 5, marginVertical: 7}}>
             <Text
               style={{
-                fontSize: SIZES.medium,
+                fontSize: SIZES.font,
                 fontFamily: FONTS.medium,
                 marginBottom: 10,
                 color: 'red',
@@ -173,7 +173,7 @@ const BuddyCard = ({item, navigation}: Props) => {
             </Text>
             <Text
               style={{
-                fontSize: SIZES.large,
+                fontSize: SIZES.medium,
                 fontFamily: FONTS.medium,
                 color: COLORS.primary,
                 marginBottom: 10,
@@ -263,15 +263,15 @@ const styles = StyleSheet.create({
     paddingVertical: 1,
   },
   left: {
-    width: 120,
+    width: 110,
     height: 'auto',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
   imageContainer: {
-    width: 90,
-    height: 90,
+    width: 80,
+    height: 80,
     borderRadius: 100,
     borderColor: 'red',
     borderWidth: 2,

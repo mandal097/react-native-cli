@@ -18,7 +18,7 @@ const LoginScreen = ({navigation}: any) => {
   const [password, setPassword] = React.useState('');
 
   const handleSignup = () => {
-    navigation.navigate('Tour');
+    navigation.navigate('Main');
   };
 
   return (
@@ -106,7 +106,7 @@ const LoginScreen = ({navigation}: any) => {
                   onChangeText={text => setPhone(text)}
                   keyboardType="phone-pad"
                   placeholderTextColor={COLORS.secondary}
-                  style={{flex: 1}}
+                  style={{flex: 1, color: COLORS.primary}}
                 />
               </View>
               {/*  */}
@@ -122,7 +122,7 @@ const LoginScreen = ({navigation}: any) => {
                   value={password}
                   onChangeText={text => setPassword(text)}
                   placeholderTextColor={COLORS.secondary}
-                  style={{flex: 1}}
+                  style={{flex: 1, color: COLORS.primary}}
                 />
               </View>
 
@@ -152,7 +152,8 @@ const LoginScreen = ({navigation}: any) => {
                 alignItems: 'center',
                 gap: 5,
                 alignSelf: 'center',
-                marginTop: 30,
+                marginTop: 20,
+                marginBottom: 70,
               }}>
               <Text style={styles.bottomTxt}>Don't have an account?</Text>
               <Text

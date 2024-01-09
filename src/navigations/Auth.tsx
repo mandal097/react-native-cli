@@ -26,7 +26,7 @@ const Auth = () => {
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Signup" component={SignupScreen} />
-      <Stack.Screen name="Tour" component={Main} />
+      <Stack.Screen name="Main" component={Main} />
     </Stack.Navigator>
   );
 };
